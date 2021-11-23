@@ -1,5 +1,5 @@
 FROM public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-scipy:v1.4
-WORKDIR /app
+#WORKDIR /app
 
 RUN  pip install --upgrade pip
 
@@ -85,3 +85,6 @@ RUN pip install future
 ## (11) KubeFlow pipelines
 RUN pip install kubeflow-kale
 RUN pip install jupyterlab
+
+RUN jupyter lab build
+RUN jupyter labextension list
