@@ -46,14 +46,14 @@ RUN pip install pygad
 RUN pip install pymc3
 
 ## (8) deep learning (* maybe not for the phase 1, but for later)
-## tensorflow # (for GPU) tensorflow-gpu, horovod
+tensorflow # (for GPU) tensorflow-gpu, horovod
 
 RUN pip install tensorflow
 RUN pip install Keras-Applications
 RUN pip install Keras-Preprocessing
 RUN pip install tensorboard
-# RUN pip install torch  => executor failed running [/bin/bash -c pip install torch]: exit code: 137
-# RUN pip install torchvision
+RUN pip install torch  # => executor failed running [/bin/bash -c pip install torch]: exit code: 137
+RUN pip install torchvision
 RUN pip install mxnet
 
 
