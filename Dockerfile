@@ -60,7 +60,7 @@ RUN pip install mxnet
 ## (9) visualization
 RUN pip install matplotlib
 RUN pip install seaborn
-RUN pip install jupyter-dash
+## RUN pip install jupyter-dash
 RUN pip install dash
 RUN pip install plotly
 RUN pip install ipykernel
@@ -84,7 +84,12 @@ RUN pip install future
 
 ## (11) KubeFlow pipelines
 RUN pip install kubeflow-kale
-RUN pip install jupyterlab
 
-RUN jupyter lab build
+# install jupyter lab
+RUN pip install "jupyterlab>=2.0.0,<3.0.0"
+
+# install the extension
+RUN jupyter labextension install kubeflow-kale-labextension
+# verify extension status
 RUN jupyter labextension list
+
