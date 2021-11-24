@@ -46,7 +46,7 @@ RUN pip install pygad
 RUN pip install pymc3
 
 ## (8) deep learning (* maybe not for the phase 1, but for later)
-tensorflow # (for GPU) tensorflow-gpu, horovod
+#tensorflow # (for GPU) tensorflow-gpu, horovod
 
 RUN pip install tensorflow
 RUN pip install Keras-Applications
