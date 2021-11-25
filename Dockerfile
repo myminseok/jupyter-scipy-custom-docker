@@ -82,14 +82,4 @@ RUN pip install python-dateutil
 RUN pip install pytz
 RUN pip install future
 
-## (11) KubeFlow pipelines
-RUN pip install kubeflow-kale
-
-# install jupyter lab
-RUN pip install "jupyterlab>=2.0.0,<3.0.0"
-
-# install the extension
-RUN jupyter labextension install kubeflow-kale-labextension
-# verify extension status
-RUN jupyter labextension list
 
