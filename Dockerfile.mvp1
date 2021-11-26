@@ -54,7 +54,7 @@ RUN pip install mxnet
 ## (9) visualization
 RUN pip install matplotlib
 RUN pip install seaborn
-## RUN pip install jupyter-dash
+## RUN pip install jupyter-dash ## gives alert "jupyterlab-dash needs to be included in build"  when access to notebook.
 RUN pip install dash
 RUN pip install plotly
 RUN pip install ipykernel
