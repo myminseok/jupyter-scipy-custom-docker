@@ -82,4 +82,5 @@ RUN pip install python-dateutil
 RUN pip install pytz
 RUN pip install future
 
-
+## (11) KubeFlow pipelines
+RUN pip install kubeflow-kale
