@@ -1,5 +1,4 @@
 FROM public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-scipy:v1.4
-#WORKDIR /app
 
 RUN  pip install --upgrade pip
 
@@ -9,8 +8,6 @@ RUN pip install psycopg2-binary
 RUN pip install sql_magic
 RUN pip install ipython-sql==0.3.9
 RUN pip install pgspecial
-
-
 
 ## (3) data manipulations and operations
 RUN pip install numpy
@@ -24,17 +21,16 @@ RUN pip install statsmodels
 RUN pip install xgboost
 RUN pip install networkx
 
-
 ## (5) time series analysis (* maybe not for the phase 1, but for later)
 RUN pip install gluonts
-#RUN pip install prophet => error
+# RUN pip install prophet => error
 RUN pip install pmdarima
-#RUN pip install spectrum => error
+# RUN pip install spectrum => error
 
 
 ## (6) explanations of machine learning models (* maybe not for the phase 1, but for later)
 RUN pip install lime
-#RUN pip install shap =>  error: command 'gcc' failed
+# RUN pip install shap =>  error: command 'gcc' failed
 
 
 ## (7) scheduling optimization (* maybe not for the phase 1, but for later)
@@ -46,13 +42,11 @@ RUN pip install pygad
 RUN pip install pymc3
 
 ## (8) deep learning (* maybe not for the phase 1, but for later)
-#tensorflow # (for GPU) tensorflow-gpu, horovod
-
-RUN pip install tensorflow
+RUN pip install tensorflow # (for GPU) tensorflow-gpu, horovod
 RUN pip install Keras-Applications
 RUN pip install Keras-Preprocessing
 RUN pip install tensorboard
-RUN pip install torch  # => executor failed running [/bin/bash -c pip install torch]: exit code: 137
+RUN pip install torch 
 RUN pip install torchvision
 RUN pip install mxnet
 
@@ -82,5 +76,3 @@ RUN pip install python-dateutil
 RUN pip install pytz
 RUN pip install future
 
-## (11) KubeFlow pipelines
-RUN pip install kubeflow-kale
