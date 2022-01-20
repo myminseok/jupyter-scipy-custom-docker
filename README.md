@@ -61,7 +61,7 @@ docker save jupyter-scipy-from-container:latest -o jupyter-scipy-from-container_
 
 ```
 
-## graphviz test
+## testing graphviz 
 
 ```
 
@@ -71,5 +71,10 @@ dot
 dot.render(directory='doctest-output').replace('\\', '/')
 
 ```
+https://graphviz.readthedocs.io/en/stable/manual.html
+
+## Reference
+https://github.com/myminseok/kubeflow-main/blob/main/updating-jupyter-notebook-mages.md
+
 
 
