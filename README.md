@@ -10,9 +10,13 @@ public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-scipy   v1.4      939
 
 ```
 
-test
+local test
 ```
-docker run -it  jupyter-scipy-custom
+docker run -p 8888:8888 jupyter-scipy-custom-docker:mvp1
+
+open http://localhost:8888/
+
+
 ```
 
 ```
@@ -54,6 +58,17 @@ docker tag <CONTAINER_ID>  jupyter-scipy-from-container:latest
 
 docker save jupyter-scipy-from-container:latest -o jupyter-scipy-from-container__latest.tar
 
+
+```
+
+## graphviz test
+
+```
+
+import graphviz
+dot = graphviz.Digraph('round-table', comment='The Round Table')
+dot
+dot.render(directory='doctest-output').replace('\\', '/')
 
 ```
 

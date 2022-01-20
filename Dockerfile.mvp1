@@ -61,6 +61,11 @@ RUN pip install ipykernel
 RUN pip install ipython
 RUN pip install ipywidgets
 RUN pip install holoviews
+
+USER root
+RUN apt-get update
+RUN apt-get install graphviz -y
+USER jovyan
 RUN pip install graphviz
 
 ## (10) miscellaneous
