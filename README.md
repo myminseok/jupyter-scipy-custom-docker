@@ -1,7 +1,7 @@
 ## Building container image from Dockerfile
 
 ```
-docker build -t jupyter-scipy-custom .
+docker build -t jupyter-scipy-custom:latest --file Dockerfile.mvp1 .
 
 docker images
 REPOSITORY                                                         TAG       IMAGE ID       CREATED              SIZE
@@ -12,7 +12,7 @@ public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-scipy   v1.4      939
 
 local test
 ```
-docker run -p 8888:8888 jupyter-scipy-custom-docker:mvp1
+docker run -p 8888:8888 jupyter-scipy-custom:latest
 
 open http://localhost:8888/
 
